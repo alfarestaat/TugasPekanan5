@@ -4,7 +4,7 @@ describe('Test Flow Login kasirAja', () => {
       cy.url().should('include', '/login')
     })
   
-    it('Success login using valid data', () => {
+    it('User can login using valid data', () => {
       cy.visit('https://kasirdemo.belajarqa.com')
       cy.get('#email').type("fares.tris@gmail.com")
       cy.get('#password').type("tokopedia123")
@@ -17,7 +17,7 @@ describe('Test Flow Login kasirAja', () => {
       cy.contains("kasirAja")
     })
 
-    it('Failed login using empty password', () => {
+    it("User can't login using empty password", () => {
         cy.visit('https://kasirdemo.belajarqa.com')
         cy.get('#email').type("fares.tris@gmail.com")
         cy.get('#root > div > div > div > div.css-1w7v3tn > div > button').click()
