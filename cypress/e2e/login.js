@@ -1,14 +1,14 @@
-describe('Test Login kasirAja', () => {
-    it('should open login page first', () => {
+describe('Test Flow Login kasirAja', () => {
+    it('Should open login page first', () => {
       cy.visit('https://kasirdemo.belajarqa.com')
       cy.url().should('include', '/login')
     })
   
-    it('success login using valid credential', () => {
+    it('Success login using valid data', () => {
       cy.visit('https://kasirdemo.belajarqa.com')
       cy.get('#email').type("fares.tris@gmail.com")
       cy.get('#password').type("tokopedia123")
-      cy.contains("login").click()
+      cy.get('#root > div > div > div > div.css-1w7v3tn > div > button').click()
   
       // should be redirected to dashboard page /dashboard
       cy.url().should('include', '/dashboard')
@@ -17,10 +17,10 @@ describe('Test Login kasirAja', () => {
       cy.contains("kasirAja")
     })
 
-    it('failed login using empty password', () => {
+    it('Failed login using empty password', () => {
         cy.visit('https://kasirdemo.belajarqa.com')
         cy.get('#email').type("fares.tris@gmail.com")
-        cy.contains("login").click()
+        cy.get('#root > div > div > div > div.css-1w7v3tn > div > button').click()
     
         // should be redirected to dashboard page /login
         cy.url().should('include', '/login')
