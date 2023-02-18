@@ -22,10 +22,10 @@ describe('Test Login kasirAja', () => {
         cy.get('#email').type("fares.tris@gmail.com")
         cy.contains("login").click()
     
-        // should be redirected to dashboard page /dashboard
+        // should be redirected to dashboard page /login
         cy.url().should('include', '/login')
     
-        // should contains text "kasirAja"
+        // should display alert "password" is not allowed to be empty
         cy.get('#root > div > div > div > div.css-1w7v3tn > div > div.chakra-alert.css-qwanz3').should('have.text','"password" is not allowed to be empty')
       })
 })
