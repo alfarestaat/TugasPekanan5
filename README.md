@@ -24,8 +24,3 @@ npm run test
 npx cypress open
 ```
 
-I create flow testing cypress website kasirAja with scenario:
-1. Test Flow Login: User can login using valid data, User can't login using empty password
-2. Test Flow Add Customers: User can add customer with valid input, User can't add customer without input customer name
-3. Test Flow Add Products: User can add product, User can't add product because 'price' must be greater than ref:cost
-
