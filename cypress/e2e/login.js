@@ -18,7 +18,7 @@ describe('Test Flow Login kasirAja', () => {
     })
 
     it("User can't login using empty password", () => {
-        cy.visit('https://kasirdemo.belajarqa.com')
+        cy.visit('/')
         cy.get('#email').type("fares.tris@gmail.com")
         cy.get('#root > div > div > div > div.css-1w7v3tn > div > button').click()
     

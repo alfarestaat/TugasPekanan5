@@ -1,11 +1,11 @@
 describe('Test Flow Add Product', () => {
     it('Should open login page first', () => {
-      cy.visit('https://kasirdemo.belajarqa.com')
+      cy.visit('/')
       cy.url().should('include', '/login')
     })
   
     it('Input valid username dan password then Login', () => {
-      cy.visit('https://kasirdemo.belajarqa.com')
+      cy.visit('/')
       cy.get('#email').type("fares.tris@gmail.com")
       cy.get('#password').type("tokopedia123")
       cy.get('#root > div > div > div > div.css-1w7v3tn > div > button').click()
